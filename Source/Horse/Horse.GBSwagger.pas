@@ -102,7 +102,7 @@ begin
     JSONSwagger := SwaggerJSONString(Swagger);
 
   LWebResponse := AResponse.RawWebResponse;
-  LWebResponse.ContentType := 'application/json';
+  LWebResponse.ContentType := 'application/json; charset=utf-8';
   LWebResponse.ContentStream := TStringStream.Create(JSONSwagger, TEncoding.UTF8);
   LWebResponse.SendResponse;
 end;
